@@ -1,6 +1,6 @@
-# Ember-cli-deploy-opsworks
+# ember-cli-deploy-opsworks
 
-This README outlines the details of collaborating on this Ember addon.
+**This ember-cli-deploy plugin is no longer maintained. If you'd like to take it over, ping me and I'll transfer ownership.**
 
 ## Installation
 

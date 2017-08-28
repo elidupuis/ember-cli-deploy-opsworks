@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-opsworks",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Ember CLI Deploy plugin to trigger a new deployment on ASW OpsWorks.",
   "directories": {
     "doc": "doc",

@@ -1,27 +1,52 @@
 # ember-cli-deploy-opsworks
 
+> An ember-cli-plugin to create an AWS OpsWorks deployment
+
 **This ember-cli-deploy plugin is no longer maintained. If you'd like to take it over, ping me and I'll transfer ownership.**
 
-## Installation
+## What is an ember-cli-deploy plugin?
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-deploy-opsworks`
-* `npm install`
-* `bower install`
+A plugin is an addon that can be executed as a part of the ember-cli-deploy pipeline. A plugin will implement one or more of the ember-cli-deploy's pipeline hooks.
 
-## Running
+For more information on what plugins are and how they work, please refer to the [Plugin Documentation][1].
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## Quick Start
+To get up and running quickly, do the following:
 
-## Running Tests
+- Ensure [ember-cli-deploy-build][2] is installed and configured.
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+- Install this plugin
 
-## Building
+```bash
+$ ember install ember-cli-deploy-opsworks
+```
 
-* `ember build`
+- Run the pipeline
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+```bash
+$ ember deploy
+```
+
+## ember-cli-deploy Hooks Implemented
+
+For detailed information on what plugin hooks are and how they work, please refer to the [Plugin Documentation][1].
+
+- `activate`
+
+## Configuration Options
+
+For detailed information on how configuration of plugins works, please refer to the [Plugin Documentation][1].
+
+Place the following configuration into `config/deploy.js`;
+
+```javascript
+ENV.opsworks = {
+  stackId: process.env.AWS_STACK_ID,
+  appId: process.env.AWS_APP_ID,
+  accessKeyId: process.env.AWS_KEY,
+  secretAccessKey: process.env.AWS_SECRET
+}
+```
+
+[1]: http://ember-cli.github.io/ember-cli-deploy/plugins "Plugin Documentation"
+[2]: https://github.com/ember-cli-deploy/ember-cli-deploy-build "ember-cli-deploy-build"

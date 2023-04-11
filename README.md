@@ -2,6 +2,8 @@
 
 > An ember-cli-plugin to create an AWS OpsWorks deployment
 
+[![npm](https://img.shields.io/npm/v/ember-cli-deploy-opsworks.svg)](https://www.npmjs.com/package/ember-cli-deploy-opsworks)  [![CI](https://github.com/elidupuis/ember-cli-deploy-archive/actions/workflows/ci.yaml/badge.svg)](https://github.com/elidupuis/ember-cli-deploy-archive/actions/workflows/ci.yaml)
+
 **This ember-cli-deploy plugin is no longer maintained. If you'd like to take it over, ping me and I'll transfer ownership.**
 
 ## What is an ember-cli-deploy plugin?

@@ -2,6 +2,21 @@
   "name": "ember-cli-deploy-opsworks",
   "version": "0.1.0",
   "description": "Ember CLI Deploy plugin to trigger a new deployment on ASW OpsWorks.",
+  "keywords": [
+    "ember-addon",
+    "ember-cli-deploy-plugin"
+  ],
+  "homepage": "https://github.com/elidupuis/ember-cli-deploy-opsworks#readme",
+  "bugs": {
+    "url": "https://github.com/elidupuis/ember-cli-deploy-opsworks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elidupuis/ember-cli-deploy-opsworks.git"
+  },
+  "license": "MIT",
+  "author": "Eli Dupuis <elidupuis@gmail.com>",
+  "main": "index.js",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -12,29 +27,6 @@
     "test:mocha": "node tests/runner.js",
     "test": "npm-run-all lint test:mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elidupuis/ember-cli-deploy-opsworks.git"
-  },
-  "engines": {
-    "node": "14.* || 16.* || >= 18"
-  },
-  "author": "Eli Dupuis <elidupuis@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "chai": "^4.3.4",
-    "chai-as-promised": "^7.1.1",
-    "ember-cli": "~3.28.1",
-    "eslint": "^7.32.0",
-    "eslint-plugin-node": "^11.1.0",
-    "glob": "^7.2.0",
-    "mocha": "^9.1.3",
-    "npm-run-all": "^4.1.5"
-  },
-  "keywords": [
-    "ember-addon",
-    "ember-cli-deploy-plugin"
-  ],
   "dependencies": {
     "aws-sdk": "^2.6.0",
     "core-object": "^3.1.5",
@@ -42,13 +34,41 @@
     "ember-cli-deploy-plugin": "^0.2.6",
     "rsvp": "^4.8.5"
   },
+  "devDependencies": {
+    "@release-it-plugins/lerna-changelog": "^5.0.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "ember-cli": "~3.28.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-node": "^11.1.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.1.3",
+    "npm-run-all": "^4.1.5",
+    "release-it": "^15.5.0"
+  },
+  "engines": {
+    "node": "14.* || 16.* || >= 18"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "after": "ember-cli-deploy-s3-index"
   },
-  "main": "index.js",
-  "bugs": {
-    "url": "https://github.com/elidupuis/ember-cli-deploy-opsworks/issues"
-  },
-  "homepage": "https://github.com/elidupuis/ember-cli-deploy-opsworks#readme"
+  "release-it": {
+    "plugins": {
+      "@release-it-plugins/lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
+  }
 }

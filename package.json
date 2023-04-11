@@ -16,17 +16,16 @@
     "url": "git+https://github.com/elidupuis/ember-cli-deploy-opsworks.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": "14.* || 16.* || >= 18"
   },
   "author": "Eli Dupuis <elidupuis@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^3.3.0",
-    "chai-as-promised": "^5.1.0",
-    "ember-cli": "2.8.0",
-    "ember-cli-release": "^0.2.9",
-    "eslint": "^3.18.0",
-    "mocha": "^2.3.3"
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "ember-cli": "~3.28.1",
+    "eslint": "^7.32.0",
+    "mocha": "^9.1.3"
   },
   "keywords": [
     "ember-addon",
@@ -34,10 +33,10 @@
   ],
   "dependencies": {
     "aws-sdk": "^2.6.0",
-    "core-object": "^2.0.6",
-    "ember-cli-babel": "^5.1.6",
+    "core-object": "^3.1.5",
+    "ember-cli-babel": "^7.26.11",
     "ember-cli-deploy-plugin": "^0.2.6",
-    "rsvp": "^3.2.1"
+    "rsvp": "^4.8.5"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
